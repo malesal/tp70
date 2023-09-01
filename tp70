@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool esNombreElegante(const string & nombre); 
+int main() {
+    string nombre;
+    cout << "Ingrese un nombre en minuscula: ";
+    cin >> nombre;
+    
+    bool elegante = esNombreElegante(nombre);
+    if (elegante) {
+        cout << "true" << endl;
+    } else {
+        cout << "false" << endl;
+    }  
+    return 0;
+}
+bool esNombreElegante(const string & nombre) {  
+    if (nombre.length() >= 2 && nombre[0] == 'a' && nombre[nombre.length() - 1] == 'a') {
+        return true;
+    } else {
+        return false;
+    }
+}
